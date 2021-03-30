@@ -15,6 +15,7 @@ gzatizer: $(OBJSFULL)
 	$(CC) $(CFLAGS) $(LIBSFULL) -o $@ $^
 
 $(OBJSDIR)/%.o: %.c
+	mkdir -p $(OBJSDIR)
 	$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
